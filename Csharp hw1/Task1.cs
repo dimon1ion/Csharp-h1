@@ -13,13 +13,16 @@ namespace Csharp_hw1
         {
             Console.WriteLine("Enter sentence with letters:");
             string str = "";
+            int count = 0;
             char letter;
             do
             {
                 letter = Convert.ToChar(Console.ReadLine());
                 str += letter;
+                if (letter == ' ') { count++; }
             } while (letter != '.');
-            Console.WriteLine($"Sentence => {str}");
+            Console.WriteLine($"Sentence => {str}" +
+                $"\nSpaces: {count}");
             Thread.Sleep(1000);
         }
     }
